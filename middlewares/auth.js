@@ -10,7 +10,7 @@ const verifyToken = async (req, res, next) => {
     })
   }
 
-  const publicKey = jwtKey.PUBLIC_KEY
+  const publicKey = jwtKey.public_key
 
   try {
     jwt.verify(authToken, publicKey)

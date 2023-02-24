@@ -5,7 +5,7 @@ const ain = new Ain(env.AIN_API_SERVER, 0)
 const ainetworkKey = require('../keys/ainetwork.json')
 
 // load account
-const privateKey = ainetworkKey.privateKey
+const privateKey = ainetworkKey.private_key
 const address = ain.wallet.addAndSetDefaultAccount(privateKey)
 
 const createAccount = () => {
