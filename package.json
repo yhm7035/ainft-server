@@ -1,5 +1,5 @@
 {
-  "name": "ainft-comcom",
+  "name": "ainft-server",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -14,6 +14,7 @@
     "gpt-3-encoder": "^1.1.4",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
+    "jsonwebtoken": "^9.0.0",
     "morgan": "~1.9.1",
     "openai": "^3.1.0"
   }

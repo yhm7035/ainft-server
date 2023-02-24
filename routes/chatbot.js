@@ -1,14 +1,10 @@
 const express = require('express')
 const router = express.Router()
 
-const { env } = require('../utils/env')
+const { verifyToken } = require('../middlewares/auth')
 const { getResponse } = require('./chatbot.internal')
 
-const sleep = (ms) => {
-  return new Promise(resolve => setTimeout(resolve, ms))
-}
-
-router.post('/request', async function(req, res, next) {
+router.post('/request', verifyToken, async function(req, res, next) {
   try {
     const { request, requestTime, address } = req.body
 
