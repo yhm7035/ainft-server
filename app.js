@@ -7,6 +7,7 @@ require('dotenv').config()
 
 const indexRouter = require('./routes/index')
 const chatbotRouter = require('./routes/chatbot')
+const serverRouter = require('./routes/server')
 const { registerEvent } = require('./utils/event_handler')
 
 const app = express()
@@ -23,6 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', indexRouter)
 app.use('/chatbot', chatbotRouter)
+app.use('/server', serverRouter)
 
 registerEvent()
 
