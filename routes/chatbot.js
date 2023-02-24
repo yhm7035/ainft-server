@@ -26,6 +26,8 @@ router.post('/request', verifyToken, async function(req, res, next) {
       })
     }
   } catch (err) {
+    console.log(err)
+
     res.status(500).json({
       message: 'Internal server error'
     })
