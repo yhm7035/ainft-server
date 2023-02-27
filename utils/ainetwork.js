@@ -1,7 +1,7 @@
 const { env } = require('./env')
 
 const Ain = require('@ainblockchain/ain-js').default
-const ain = new Ain(env.AIN_API_SERVER, 0)
+const ain = new Ain(env.AIN_API_SERVER, 1)
 const ainetworkKey = require('../keys/ainetwork.json')
 
 // load account
@@ -25,16 +25,19 @@ const createApp = () => {
         admin: {
           [address]: true,
         },
-        // service: {
-        //   staking: {
-        //     lockup_duration: 604800000 // 7 days in ms
-        //   }
-        // }
+        service: {
+          staking: {
+            lockup_duration: 604800000
+          }
+        }
       },
       nonce: -1,
     })
     .then((res) => {
       console.log(`res: ${JSON.stringify(res)}`)
+    })
+    .catch((err) => {
+      console.log(err)
     })
 }
 
@@ -63,6 +66,7 @@ const setAppRule = () => {
     })
 }
 
+// createAccount()
 // createApp()
 // setAppRule()
 

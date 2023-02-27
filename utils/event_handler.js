@@ -5,6 +5,11 @@ const ain = new Ain(env.AIN_EVENT_SERVER)
 
 const { getResponse } = require('../routes/chatbot.internal')
 
+// temp whitelist
+const addressWhitelist = {
+  0x664D279751DBB99AF6A533877Da322E415f60F5b: true
+}
+
 const registerEvent = async () => {
   await ain.em.connect()
   console.log('connected to event handler node')

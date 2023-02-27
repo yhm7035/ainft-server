@@ -1,8 +1,8 @@
 const env = {
-  AIN_API_SERVER: 'https://testnet-api.ainetwork.ai',
-  AIN_EVENT_SERVER: 'https://testnet-event.ainetwork.ai',
-  APP_NAME: 'ainft_tutorial_dev',
-  APP_PATH: '/apps/ainft_tutorial_dev'
+  AIN_API_SERVER: 'https://mainnet-api.ainetwork.ai',
+  AIN_EVENT_SERVER: 'https://mainnet-event.ainetwork.ai',
+  APP_NAME: 'ainft_a_day',
+  APP_PATH: '/apps/ainft_a_day'
 }
 
 module.exports = {
